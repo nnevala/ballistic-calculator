@@ -1,0 +1,172 @@
+[
+    {
+        "id": "multi-sniper-rifle",
+        "name": "MULTI Sniper Rifle",
+        "tags": [
+            "sniper", "MULTI"
+        ],
+        "use_cc": 0,
+        "em_vulnerability": 1,
+        "template": 0,
+        "ranges": {
+            "short":    {
+                "start": 0,
+                "end": 12,
+                "modifier": 0
+            },
+            "medium":      {
+                "start": 12,
+                "end": 36,
+                "modifier": 3
+            },
+            "long":     {
+                "start": 36,
+                "end": 52,
+                "modifier": -3
+            },
+            "maximum":      {
+                "start": 52,
+                "end": 104,
+                "modifier": -6
+            }
+        },
+        "damage": 15,
+        "ammo": [
+            {
+                "name": "Normal",
+                "burst": 2,
+                "id": "N"
+            },
+            {
+                "name": "Armour Piercing",
+                "burst": 2,
+                "id": "AP"
+            },
+            {
+                "name": "Double Action",
+                "burst": 2,
+                "id": "DA"
+            },
+            {
+                "name": "Integrated Double Action + Armour Piercing",
+                "burst": 1,
+                "id": "DA+AP"
+            }
+        ]
+    },
+    {
+        "id": "rifle",
+        "name": "Rifle",
+        "tags": [
+            "rifle"
+        ],
+        "use_cc": 0,
+        "em_vulnerability": 0,
+        "template": 0,
+        "ranges": {
+            "short":    {
+                "start": 0,
+                "end": 8,
+                "modifier": 0
+            },
+            "medium":      {
+                "start": 8,
+                "end": 16,
+                "modifier": 3
+            },
+            "long":     {
+                "start": 16,
+                "end": 24,
+                "modifier": -3
+            },
+            "maximum":      {
+                "start": 24,
+                "end": 48,
+                "modifier": -6
+            }
+        },
+        "damage": 13,
+        "ammo": [
+            {
+                "name": "Normal",
+                "burst": 3,
+                "id": "N"
+            }
+        ]
+    },
+    {
+        "id": "combi_rifle",
+        "tags": [
+            "rifle"
+        ],
+        "name": "Combi Rifle",
+        "use_cc": 0,
+        "em_vulnerability": 0,
+        "template": 0,
+        "ranges": {
+            "short":    {
+                "start": 0,
+                "end": 8,
+                "modifier": 3
+            },
+            "medium":      {
+                "start": 8,
+                "end": 16,
+                "modifier": 3
+            },
+            "long":     {
+                "start": 16,
+                "end": 24,
+                "modifier": -3
+            },
+            "maximum":      {
+                "start": 24,
+                "end": 48,
+                "modifier": -6
+            }
+        },
+        "damage": 13,
+        "ammo": [
+            {
+                "name": "Normal",
+                "burst": 3,
+                "id": "N"
+            }
+        ]
+    },
+    {
+        "id": "light_shotgun",
+        "tags": [
+            "shotgun"
+        ],
+        "name": "Light Shotgun",
+        "use_cc": 0,
+        "em_vulnerability": 0,
+        "template": "small_teardrop",
+        "ranges": {
+            "short":    {
+                "start": 0,
+                "end": 8,
+                "modifier": 3
+            },
+            "medium":      {
+                "start": 8,
+                "end": 16,
+                "modifier": 0
+            },
+            "long":     {
+                "start": 16,
+                "end": 24,
+                "modifier": -3
+            }
+        },
+        "damage": 13,
+        "ammo": [
+            {
+                "name": "Normal",
+                "burst": 3,
+                "id": "N"
+            }
+        ]
+    }
+]
