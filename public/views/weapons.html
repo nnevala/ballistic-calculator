@@ -1,0 +1,84 @@
+<style>
+    .ballistic {
+        font-family: tahoma, verdana, sans-serif;
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .ballistic tbody th {
+        padding: 8px;
+        width: 15%;
+    }
+
+    .ballistic .yesno {
+        width: 5%;
+    }
+    .ballistic .range {
+        width: 10%;
+    }
+
+
+    .ballistic .name {
+        text-align: left;
+    }
+    .ballistic td, .ballistic th {
+        text-align: center;
+        border: 1px solid #000;
+    }
+
+    .ballistic .odd {
+        background-color: #ccc;
+    }
+    .ballistic .even {
+        background-color: #ddd;
+    }
+
+    .range {
+        border: 1px solid #000;
+    }
+    .ammo-burst dd {
+    }
+</style>
+
+<table class="weapons ballistic">
+    <caption>Ballistic Weapons</caption>
+    <colgroup>
+        <col id="name" />
+    </colgroup>
+    <colgroup>
+        <col class="range odd" />
+        <col class="range even" />
+        <col class="range odd" />
+        <col class="range even" />
+        <col class="damage" />
+        <col class="ammo-burst" />
+        <col span="3" class="yesno" />
+    </colgroup>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Short</th>
+        <th>Medium</th>
+        <th>Long</th>
+        <th>Maximum</th>
+        <th>Damage</th>
+        <th>Ammo</th>
+        <th>Template</th>
+        <th>E/M Vulnerability</th>
+        <th>CC</th>
+    </tr>
+    </thead>
+    <tbody class="list">
+    <tr data-ng-repeat="weapon in weapons | filter:query | orderBy:orderProp">
+        <th class="name">{{weapon.name}}</th>
+        <td data-ng-repeat="range in ranges" class="{{range}} range start">
+            <weapon-range range="weapon.ranges[range]"></weapon-range>
+        </td>
+        <td class="damage">{{weapon.damage}}</td>
+        <td class="ammo-burst"><weapon-ammo-burst ammunition="weapon.ammo" /></td>
+        <td class="ammo-template">{{weapon.template | yesorno}}</td>
+        <td class="em-vulnerability">{{weapon.em_vulnerability | yesorno}}</td>
+        <td class="use-cc">{{weapon.use_cc | yesorno}}</td>
+    </tr>
+    </tbody>
+</table>
